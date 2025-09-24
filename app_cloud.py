@@ -11,7 +11,7 @@ import time
 import logging
 import threading
 from flask import Flask, jsonify, request
-from scraper import search_products
+from scraper_cloud import search_products_cloud
 
 # Simple rate limiting
 request_lock = threading.Lock()
@@ -145,7 +145,7 @@ def create_app() -> Flask:
             logger.info(f"Searching for '{query}' with limit {limit}")
             
             # Perform the search
-            results = search_products(query, max_results=limit)
+            results = search_products_cloud(query, max_results=limit)
             
             processing_time = time.time() - start_time
             
