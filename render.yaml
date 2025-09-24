@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: daraz-scraper-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python start_cloud.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: THREADS
+        value: 2
+      - key: LOG_LEVEL
+        value: INFO
+    healthCheckPath: /health
+    plan: starter

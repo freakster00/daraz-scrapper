@@ -4,8 +4,5 @@ beautifulsoup4==4.12.2
 gunicorn==21.2.0
 selenium==4.15.2
 webdriver-manager==4.0.1
-aiohttp==3.9.1
-asyncio-throttle==1.0.2
-gevent==23.9.1
+waitress==3.0.2
 psutil==5.9.6
-flask-limiter==3.5.0
